@@ -1,0 +1,65 @@
+1. 能存储各种硬件信息
+2. 硬件信息可以自动收集、自动更新
+   a.去服务器上抓取硬件信息,并更新到数据 库
+   b.通过自动发现工具，发现相应资产，再去并发抓取
+   c.通过c/s架构，客户端自动来汇报
+   d. 网络设备可通过snmp抓取硬件信息
+3. 可手动录入资产
+3. 对外接口可灵活开放
+4. 接口安全问题，数据问题
+5. 资产分类 ，
+    按idc,
+    业务线，
+    ip网段，
+    硬件类型，
+    服务类型（功能）
+    系统
+    状态
+    管理员
+6. 事件管理
+   1. 记录所有资产的变更历史
+   2. 流程日志
+
+7 . 确定资产的唯一标识
+    sn:号　
+
+８．硬件下架，过保，报废了，是否可自动删除？
+    资产不应该被删除，
+
+９.　ＣＩ（configuration item ）
+10. 资产的定期盘点，
+    业务 数据 需要维护
+
+
+
+
+response = {
+    "data":［｛name:333, job:dd｝, {name:343}］
+    "error": [{err1:invalid argums..}],
+    "status": "1000"
+}
+
+
+/get_new_msg/
+/del_msg/
+/put_new_msg/
+
+GET /msg/
+GET /msg/4
+POST /msg/  msg="Sanjin ,wen wo "  response = 5
+POST /msg/5 msg="Sanjin ,wen wenshan"
+DELETE /msg/5
+
+1. 创建project MadKing, startapp : assets
+2. 创建表结构：自定义用户，　资产各个表
+３.　定义好表现层，序列化类，单独一个模块 serializers.py
+４.　定义好视图，rest_views.py
+5. 定义好urls, rest_urls.py
+
+
+cpu_count :４　！＝　ｉｎｔ（‘４’）
+ｉｎｔ　
+
+
+server nic = 1,2,3
+client nic = 2,3,4,5,6
